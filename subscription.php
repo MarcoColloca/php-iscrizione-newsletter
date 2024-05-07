@@ -2,6 +2,9 @@
 session_start();
 //var_dump($_SESSION);
 $is_valid_mail = $_SESSION['mail_validation'];
+
+session_unset();
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
