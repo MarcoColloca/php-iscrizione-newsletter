@@ -3,7 +3,13 @@
 include_once __DIR__ . '/utilities.php';
 
 //var_dump($mail_validation);
+if($mail_validation === true || $mail_validation === false){
+    session_start();
 
+    
+    $_SESSION['mail_validation'] = $mail_validation;
+    header('Location: ./subscription.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,29 +39,6 @@ include_once __DIR__ . '/utilities.php';
                     </div>
                 </div>
             </section>
-    
-            <?php
-            if ($mail_validation === true) {
-                ?>
-                <div class="text-center alert alert-success" role="alert">
-                    <h2>
-                        Tutto secondo i piani!
-                    </h2>
-                    <a href="http://localhost/php-iscrizione-newsletter/">Torna alla pagina precedente</a>
-                </div>
-        
-                <?php
-            } else if ($mail_validation === false) {
-                ?>
-                    <div class="text-center alert alert-danger" role="alert">
-                        <h2>
-                            Qualcosa è andato storto, controlla la tua mail.
-                        </h2>
-                        <a href="http://localhost/php-iscrizione-newsletter/">Riprova</a>
-                    </div>
-                <?php
-            }
-            ?>
         </main>
 
 
