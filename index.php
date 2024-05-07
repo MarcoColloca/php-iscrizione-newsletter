@@ -1,5 +1,19 @@
 <?php 
+var_dump($_POST);
 
+$mail = $_POST['newsletter'] ?? null;
+
+$mail_validation = false;
+
+if($mail === null){
+    $mail_validation = null;
+}else if(str_contains($mail, '@') && str_contains($mail, '.')){
+    $mail_validation = true;
+}else{
+    $mail_validation = false;
+}
+
+var_dump($mail_validation);
 
 ?>
 <!DOCTYPE html>
@@ -38,6 +52,29 @@
                 </div>
             </div>
         </section>
+
+        <?php 
+        if ($mail_validation === true){            
+        ?>
+            <div class="mail-validation text-success">
+                <h2>
+                    La Mail è Valida
+                </h2>
+                <a href="http://localhost/php-iscrizione-newsletter/">Torna indietro</a>
+            </div>
+
+        <?php
+        }else if($mail_validation === false){
+        ?>
+            <div class="mail-validation text-danger">
+                <h2>
+                    La Mail Non è Valida
+                </h2>
+                <a href="http://localhost/php-iscrizione-newsletter/">Torna indietro</a>
+            </div>
+        <?php
+        }
+        ?>
     </main>
 </body>
 
@@ -72,6 +109,13 @@
     .form-container{
         display: flex;
         justify-content: center;
+    }
+
+
+    /* Mail Validation */
+    .mail-validation{
+        text-align: center;
+        margin: 20px 0;
     }
 </style>
 </html>
