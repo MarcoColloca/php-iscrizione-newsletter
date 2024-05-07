@@ -3,6 +3,11 @@ session_start();
 //var_dump($_SESSION);
 $is_valid_mail = $_SESSION['mail_validation'];
 
+if($is_valid_mail === null){
+    header('Location: ./index.php');
+}
+
+
 session_unset();
 session_destroy();
 ?>
