@@ -1,5 +1,5 @@
 <?php 
-var_dump($_POST);
+//var_dump($_POST);
 
 $mail = $_POST['newsletter'] ?? null;
 
@@ -13,7 +13,7 @@ if($mail === null){
     $mail_validation = false;
 }
 
-var_dump($mail_validation);
+//var_dump($mail_validation);
 
 ?>
 <!DOCTYPE html>
@@ -56,7 +56,7 @@ var_dump($mail_validation);
         <?php 
         if ($mail_validation === true){            
         ?>
-            <div class="mail-validation text-success">
+            <div class="mail-validation alert alert-success" role="alert">
                 <h2>
                     La Mail è Valida
                 </h2>
@@ -66,7 +66,7 @@ var_dump($mail_validation);
         <?php
         }else if($mail_validation === false){
         ?>
-            <div class="mail-validation text-danger">
+            <div class="mail-validation alert alert-danger" role="alert">
                 <h2>
                     La Mail Non è Valida
                 </h2>
@@ -115,7 +115,6 @@ var_dump($mail_validation);
     /* Mail Validation */
     .mail-validation{
         text-align: center;
-        margin: 20px 0;
     }
 </style>
 </html>
