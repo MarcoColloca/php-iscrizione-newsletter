@@ -53,28 +53,7 @@ if($mail === null){
             </div>
         </section>
 
-        <?php 
-        if ($mail_validation === true){            
-        ?>
-            <div class="mail-validation alert alert-success" role="alert">
-                <h2>
-                    La Mail è Valida
-                </h2>
-                <a href="http://localhost/php-iscrizione-newsletter/">Torna indietro</a>
-            </div>
-
-        <?php
-        }else if($mail_validation === false){
-        ?>
-            <div class="mail-validation alert alert-danger" role="alert">
-                <h2>
-                    La Mail Non è Valida
-                </h2>
-                <a href="http://localhost/php-iscrizione-newsletter/">Torna indietro</a>
-            </div>
-        <?php
-        }
-        ?>
+       <?php include_once __DIR__ . '/utilities.php'?>
     </main>
 </body>
 
@@ -110,11 +89,6 @@ if($mail === null){
         display: flex;
         justify-content: center;
     }
-
-
-    /* Mail Validation */
-    .mail-validation{
-        text-align: center;
-    }
+    
 </style>
 </html>
