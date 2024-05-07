@@ -16,11 +16,9 @@
     header{
         background-color: coral;
         color: white;
-        margin-bottom: 100px;
     }
 
     .title{
         text-align: center;
-        
     }
 </style>

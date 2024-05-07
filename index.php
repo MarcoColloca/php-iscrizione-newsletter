@@ -29,7 +29,7 @@ if($mail_validation === true || $mail_validation === false){
 
         <?php include __DIR__ . '/components/header.php'; ?> 
     
-        <main>
+        <main class="py-5">
             <section class="newsletter">
                 <div class="container">
                     <div class="form-container">

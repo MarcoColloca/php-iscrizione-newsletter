@@ -29,7 +29,7 @@ session_destroy();
                 <h2>
                     Tutto secondo i piani!
                 </h2>
-                <a href="http://localhost/php-iscrizione-newsletter/">Torna alla pagina precedente</a>
+                <a href="http://localhost/php-iscrizione-newsletter/">Clicca qui se non vieni reinderizzato automaticamente.</a>
             </div>
     
             <?php
@@ -37,7 +37,7 @@ session_destroy();
             ?>
                 <div class="text-center alert alert-danger" role="alert">
                     <h2>
-                        Qualcosa è andato storto, controlla la tua mail.
+                        Qualcosa è andato storto, controlla la mail inserita.
                     </h2>
                     <a href="http://localhost/php-iscrizione-newsletter/">Riprova</a>
                 </div>
