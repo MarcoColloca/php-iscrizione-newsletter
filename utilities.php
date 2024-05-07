@@ -11,4 +11,3 @@ if($mail === null){
 }else{
     $mail_validation = false;
 }
-?>
