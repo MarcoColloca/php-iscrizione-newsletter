@@ -49,7 +49,7 @@ include_once __DIR__ . '/utilities.php';
                 ?>
                     <div class="text-center alert alert-danger" role="alert">
                         <h2>
-                            Qualcosa è andato storto.
+                            Qualcosa è andato storto, controlla la tua mail.
                         </h2>
                         <a href="http://localhost/php-iscrizione-newsletter/">Riprova</a>
                     </div>
