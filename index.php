@@ -7,7 +7,8 @@ if($mail_validation === true || $mail_validation === false){
     session_start();
 
     
-    $_SESSION['mail_validation'] = $mail_validation;
+    $_SESSION['mail_validation'] = $mail_validation;    
+    
     header('Location: ./subscription.php');
 }
 ?>
