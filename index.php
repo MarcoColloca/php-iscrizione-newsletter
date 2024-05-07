@@ -2,13 +2,17 @@
 //var_dump($_POST);
 include_once __DIR__ . '/utilities.php';
 
+$mail = $_POST['newsletter'] ?? null;
+
+$mail_validation = isValidEmail($mail) ;
+
 //var_dump($mail_validation);
 if($mail_validation === true || $mail_validation === false){
     session_start();
 
     
     $_SESSION['mail_validation'] = $mail_validation;    
-    
+
     header('Location: ./subscription.php');
 }
 ?>

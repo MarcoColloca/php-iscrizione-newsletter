@@ -1,13 +1,10 @@
 <?php
-
-$mail = $_POST['newsletter'] ?? null;
-
-$mail_validation = false;
-
-if($mail === null){
-    $mail_validation = null;
-}else if(str_contains($mail, '@') && str_contains($mail, '.')){
-    $mail_validation = true;
-}else{
-    $mail_validation = false;
+function isValidEmail($mail){
+    if($mail === null){
+        return null;
+    }else if(str_contains($mail, '@') && str_contains($mail, '.')){
+        return true;
+    }else{
+        return false;
+    }
 }
