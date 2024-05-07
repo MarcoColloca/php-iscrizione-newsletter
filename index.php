@@ -35,7 +35,7 @@ if($mail_validation === true || $mail_validation === false){
                     <div class="form-container">
                         <form action="" method="POST">
                             <label for="newsletter"> Inserisci la tua Mail:</label>
-                            <input type="email" name="newsletter" id="newsletter" placeholder="example@mail.com">
+                            <input type="email" name="newsletter" id="newsletter" placeholder="example@mail.com" required>
     
                             <div class="button-container my-3">
                                 <button class="btn btn-primary"> Invia </button>
